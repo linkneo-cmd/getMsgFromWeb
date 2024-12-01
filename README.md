@@ -1,37 +1,40 @@
 # 从web获取信息
+## request_get.py
+下载《罗密欧与朱丽叶》并打印前 250 个字符
+## bs4_get.py
+使用 BeautifulSoup4 获取 example.html 中的 html 内容并筛选处理
+## searchpypi.py
+打开  https://pypi.org/  搜索到的前 5 个包的信息，并自动在 tab 页中打开
 
-#### 介绍
-web 抓取
+使用前提：
+pip install beautifulsoup4
+pip install requests
+pip install lxml
 
-#### 软件架构
-软件架构说明
+使用方法：
+python searchpypi.py 包名(python3 searchpypi.py 包名)
+![alt text](image.png)
+自动在浏览器中打开搜索结果的前五个 tab 页详情
+![alt text](image-1.png)
+结果和自行在搜索框搜索结果一致
+![alt text](image-2.png)
 
+扩展：程序改编后同样适用于其他网站
 
-#### 安装教程
+## downloadXkcd.py
+下载 xkcd 网站的所有漫画，持续下载 30s 后自动停止
+使用前提：
+pip install beautifulsoup4
+pip install requests
+pip install lxml
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+使用方法：
+python downloadXkcd.py(python3 downloadXkcd.py)
+![alt text](image-3.png)
+下载图片保存在此处
+![alt text](image-4.png)
 
-#### 使用说明
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 参与贡献
-
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
-
-
-#### 特技
-
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+扩展：顺着网站的所有链接本分整个网站，复制整个论坛的所有信息，复制一个在线商店中所有产品目录等
+### TODO：
+1、怎么监控当前内存资源消耗情况
+2、怎么并行下载，让下载更多内容时处理的更快？
